@@ -2,8 +2,7 @@ Info2310::Application.routes.draw do
   root :to => 'static_pages#home'
   resources :micro_posts
 
-  resources :users
-
+  resources :sessions, only: [:new, :create, :destroy]
 
   get "static_pages/home"
 
