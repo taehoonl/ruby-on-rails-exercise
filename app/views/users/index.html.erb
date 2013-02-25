@@ -1,5 +1,7 @@
 <h1>Listing users</h1>
 
+<%= will_paginate @users %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -9,7 +11,11 @@
     <th></th>
   </tr>
 
+
+<%= will_paginate @users %> 
+
 <% @users.each do |user| %>
+
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
@@ -18,7 +24,11 @@
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+
+<%= will_paginate @users %>
+
 </table>
+
 
 <br />
 
